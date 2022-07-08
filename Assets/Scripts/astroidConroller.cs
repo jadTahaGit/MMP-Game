@@ -18,10 +18,7 @@ public class astroidConroller : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        Vector2 movement = new Vector2(moveHorizontal, 0f);
-        rigidbody2D.AddForce(movement * speed);
     }
 }
