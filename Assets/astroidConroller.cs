@@ -7,6 +7,7 @@ public class astroidConroller : MonoBehaviour
     [SerializeField]
     private float speed = 2f;
     private Rigidbody2D rigidbody2D;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +18,10 @@ public class astroidConroller : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        Vector2 movement = new Vector2(moveHorizontal, 0f);
+        rigidbody2D.AddForce(movement * speed);
     }
 }
