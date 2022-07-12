@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private float speed;
-
     private Rigidbody2D rigidbody2D;
     
    
