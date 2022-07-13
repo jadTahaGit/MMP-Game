@@ -7,9 +7,11 @@ public class AsteroidSpawnerController : MonoBehaviour
 
     [SerializeField]
     private GameObject asteroidPrefab;
+    private Vector2 screenBounds;
     // Start is called before the first frame update
     void Start()
     {
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         SpawnAsteroid();
     }
 
@@ -17,6 +19,7 @@ public class AsteroidSpawnerController : MonoBehaviour
     void SpawnAsteroid()
     {
         GameObject asteroidInstance = Instantiate(asteroidPrefab) as GameObject;
-        asteroidInstance.transform.position = new Vector2(0, 10);
+        float spawnX = Random.Range(-screenBounds.x, screenBounds.x);
+        asteroidInstance.transform.position = new Vector2(spawnX, 10);
     }
 }

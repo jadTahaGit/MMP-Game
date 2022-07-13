@@ -1,0 +1,6 @@
+{
+  "omnisharp.useModernNet": true,
+  "editor.suggest.showSnippets": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "typescript.suggest.includeCompletionsWithSnippetText": false
+}
